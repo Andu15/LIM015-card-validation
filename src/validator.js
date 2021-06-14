@@ -37,9 +37,6 @@ const validator = {
     }
     matriz = matriz + creditCardNumber.substr(creditCardNumber.length - 4, creditCardNumber.length)
     return matriz;
-  },
-  getIssuer: (creditCardNumber) => {
-    
   }
 }
 
