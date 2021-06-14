@@ -1,0 +1,127 @@
+/*borrar los estilos por defecto*/
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body {
+  background-image: url("imagenes/bg.jpg");
+}
+/*elemento section que encierra el header*/
+.cabecera{
+    align-items: center;
+    background: linear-gradient(#0097a7, #4dd0e1); 
+    border-radius:80px 80px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 60px;
+    max-width: 1000px;
+    padding: 50px 70px 50px 70px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 60%;
+    cursor: pointer;
+}
+/*modifica el logo de magazine*/
+.logotipo{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0px;
+}
+.intro{
+    font-family: 'Signika', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.texto{
+    font-size: 20px;
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+.nombre{
+    box-shadow: 0 2px 2px 0 rgba(90, 116, 14, 0.3);
+    border-radius: 5px;
+    height: 30px;
+}
+.botoncito{
+    align-items: center;
+    background: #4bacb8;
+    border-radius: 20px;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+/*modificando la segunda pagina*/
+#page2{
+    background: linear-gradient(#0097a7, #4dd0e1); 
+    border-radius:80px 80px 0px 0px;
+    display: flex;
+    margin: auto;
+    margin-top: 60px;
+    max-width: 1000px;
+    padding: 50px 70px 50px 70px;
+    width: 60%;
+    cursor: pointer;
+}
+/*modifica section*/
+.pensativa{
+    float: left;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-top: 10%;
+    object-fit:cover;
+}
+/*modifica el main*/
+#main{
+    align-items: right;
+    float: right;
+    height: 600px;
+    max-width: 600px;
+    margin-left: 2%;
+    padding: 5px;
+    width: 50%;
+}
+.parrafo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+.formulario{
+    font-size: larger;
+    text-align: center;
+}
+.tarjeta{
+    float:right;
+}
+.respuesta{
+    font-family: ginebra, Geneva, calibri;
+    font-size: 15px;
+    height: 60px;
+    margin-top:-10px;
+    text-align: center;
+}
+/*modifica pie de pagina*/
+footer{
+    background: #006978;
+    border-radius:0px 0px 60px 60px;
+    color:#ffffff;
+    clear: both;
+    font-size: 15px;
+    height: 110px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;  
+    max-width: 1000px;
+    text-align: center;
+    width: 60%;
+}

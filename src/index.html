@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lan="es">
   <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarjeta de crédito valida</title>
+    <link rel="shortcut icon" href="imagenes/icono.png" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
-</html>
+    <section id="page1" style="display: block" class="cabecera">
+      <header >
+        <div class="logotipo"><img src="imagenes/logo.png" alt="magazine logo" width="100px" height="100px"></div>
+        <h1 class="intro">Bienvenido(a) a credit card validation</h1>
+        <div class ="texto">
+          <label for="username">Nombre:</label>
+          <input class ="nombre" type="text" id="username" name="username" minlength="1" maxlength="20" autocomplete="off" pattern="[A-Za-z]" title="Escriba su nombre aquí" required>
+        </div>
+        <input class="botoncito" type="button" value="siguiente" id="button">
+      </header>
+    </section>
+    
+    <div id="page2" style="display: none">
+      <section class="pensativa">
+        <img src="imagenes/mujerpensativa.jpg" alt="imagen de una mujer pensando" width="300px" height="500px">
+      </section> 
+      <main id="main">
+        <p class="parrafo"><strong>👋 Hola <span id="name"></span>!</strong><br />
+        Esta web te permite validar la autenticacion de tu tarjeta de crédito antes de realizar tu compra, no te preocupes que no se guardaran los datos de tu tarjeta, unicamente se trata de una simulación antes de la operación para tu seguridad y la de nosotros
+        </p>
+        <section id="claseDeTarjeta" height="100px" width="100px"></section>
+        <form class="formulario" id="form">
+          <img class="tarjeta" src="imagenes/tarjeta.png" alt="modelo de tarjeta de crédito" width="250px" height="150px"><br/><br /><br /><br /><br /><br /><br />
+          <label for="numbercreditcard">Número de tarjeta</label><br /><br />
+          <input class="nombre" type="text" class="number"  id="numbercreditcard" name="numbercreditcard" required placeholder="xxxxxxxxxxxxxxxx" minlength="1" maxlength="16" autocomplete="off" title="Digite el número de su tarjeta (unicamente números sin espacios ni simbolos)"><br />
+          <input class="botoncito" type="button" value="Enviar" id="Enviar"><br />
+        </form>
+        <div class="respuesta" id="validation"></div>
+      </main>
+      </div>
+
+      <footer>
+        <p>&copy; 2021 Copyright card validation
+        Esta página se reserva los derechos de tratamiento de datos personales, asi como se recomienda el uso de esta pagina solo para fines informativos
+        </p>
+        <address>
+          Autor: Andrea Blanco<br />
+        </address>
+      </footer>
+
+      <script src="index.js" type="module"></script>
+    </body>
+  </html>
