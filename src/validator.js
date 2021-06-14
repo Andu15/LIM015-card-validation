@@ -33,7 +33,6 @@ const validator = {
   maskify: (creditCardNumber) => {
     let matriz = "";
     for (let m = 0; m < creditCardNumber.length - 4; m++) {
-      console.log(creditCardNumber[m]);
       matriz += creditCardNumber[m].replace(/\d/g,"#");
     }
     matriz = matriz + creditCardNumber.substr(creditCardNumber.length - 4, creditCardNumber.length)
