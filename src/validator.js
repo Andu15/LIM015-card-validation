@@ -1,12 +1,45 @@
 const validator = {
   isvalid: (creditCardNumber) => {
-    let $arrayInverso = [];
-    for (let $d = $creditCardNumber.length - 1; $d >= 0; $d--) {
-      $arrayInverso.push($creditCardNumber[$d]);
+    let arrayInverso = [];
+    for (let d = creditCardNumber.length - 1; d >= 0; d--) {
+      arrayInverso.push(creditCardNumber[d]);
     }
+    let pasarNumeros = arrayInverso.map(function (numeros) {
+      return Number(numeros);
+    })
+    //extraer posiciones impares y sumarlos
+    let digitosImpares = pasarNumeros.filter(function (numerosImpares, posicion) {
+      return posicion % 2 === 0;
+    })
+    let acumulador = (fijo, suma) => { return fijo + suma };
+    let sumaImpares = digitosImpares.reduce(acumulador, 0);
+    //extraer posiciones pares
+    let digitosPares = pasarNumeros.filter(
+      function (num, ind) { return ind % 2 !== 0; })
+    let multipli = digitosPares.map(function (num) { return num * 2 });
+    //extraer mayores que 9, reducirlos y sumarlos
+    let mayores = multipli.filter(function (d1) { return d1 >= 10 });
+    let mayoresReducidos = mayores.map((numeritos) => { return numeritos - 9 });
+    let sumPares1 = mayoresReducidos.reduce((acumulador));
+    //extraer menores que 9 y sumarlos
+    let menores = multipli.filter(function (d2) { return d2 < 10; });
+    let sumPares2 = menores.reduce(acumulador);
+    //sumar todos los digitos
+    let total = sumaImpares + sumPares1 + sumPares2;
+    let final = total % 10;
+    return final === 0
+    
   },
-  maskify: (creditCardNumber) => { }
-};
+  maskify: (creditCardNumber) => {
+    let matriz;
+    for (let m = 0; m < creditCardNumber.length - 4; m++) {
+      matriz = matriz + "#";
+    }
+    console.log(matriz);
+    return (matriz + creditCardNumber.substr(creditCardNumber.length - 4, creditCardNumber.length))
+  }
+}
+
 
 export default validator;
 
