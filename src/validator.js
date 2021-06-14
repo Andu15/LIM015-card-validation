@@ -31,12 +31,13 @@ const validator = {
     
   },
   maskify: (creditCardNumber) => {
-    let matriz;
+    let matriz = "";
     for (let m = 0; m < creditCardNumber.length - 4; m++) {
-      matriz = matriz + "#";
+      console.log(creditCardNumber[m]);
+      matriz += creditCardNumber[m].replace(/\d/g,"#");
     }
-    console.log(matriz);
-    return (matriz + creditCardNumber.substr(creditCardNumber.length - 4, creditCardNumber.length))
+    matriz = matriz + creditCardNumber.substr(creditCardNumber.length - 4, creditCardNumber.length)
+    return matriz;
   }
 }
 
