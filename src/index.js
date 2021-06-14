@@ -3,8 +3,7 @@ console.log(validator);
 
 const primerCuadro = document.getElementById("page1"),
     segundoCuadro = document.getElementById("page2"),
-    mensajeDeSalida = document.getElementById("validation"),
-    logoTarjeta = document.getElementById("claseDeTarjeta");
+    mensajeDeSalida = document.getElementById("validation");
 
 let cajaDeNombre = document.getElementById("username"),
 nombreReemplazado = document.getElementById("name"),
@@ -18,11 +17,14 @@ document.getElementById("button").addEventListener("click", ()=>{
 
 document.getElementById("Enviar").addEventListener("click", () => {
     let creditCardNumber = numeroDeTarjeta.value;
-    if (creditCardNumber == "") { alert("completa los datos de la tarjeta por favor"); };
+    if (creditCardNumber == "") { alert("completa los datos de la tarjeta por favor"); }
     if (creditCardNumber == "/^4\d{15}/g") { alert("Tu tarjeta es Visa"); }
     if(validator.isvalid(creditCardNumber))
     { mensajeDeSalida.innerHTML = "&#10024" + " Felicidades, tu tarjeta es valida para hacer tu compra " + "&#10024"; } else { mensajeDeSalida.innerHTML = "&#9888;&#65039" + " Uy, al parecer haz ingresado una tarjeta incorrecta, intenta nuevamente"; }
-    if (validator.maskify(creditCardNumber)) { numeroDeTarjeta.value=validator.maskify(creditCardNumber) };
+    if (validator.maskify(creditCardNumber)) { numeroDeTarjeta.value = validator.maskify(creditCardNumber) }
+    
+
+    validator.getIssuer(creditCardNumber);
 })
 
 
