@@ -37,6 +37,12 @@ const validator = {
     }
     matriz = matriz + creditCardNumber.substr(creditCardNumber.length - 4, creditCardNumber.length)
     return matriz;
+  },
+  getIssuer: (creditCardNumber) => {
+    if (creditCardNumber.match(/^4[0-9]{15}$/g)) {
+      alert("Tu tarjeta es Visa");
+    } else if (creditCardNumber.match(/^3[4-7][0-9]{14}/g)) { alert("Tu tarjeta es American Express"); } else if (creditCardNumber.match(/^5[1-5][0-9]{14}/g)) { alert("Tu tarjeta es Mastercard") } else if (creditCardNumber.match(/^6011[0-9]{12}/g)) { alert("Tu tarjeta es Discover") } else if (creditCardNumber.match(/^62[0-9]{14}/g)) { alert("Tu tarjeta es China Union Pay") } else if (creditCardNumber.match(/^[5-6][0-7][0-6][0-9]{13}/g)) { alert("Tu tarjeta es Maestro") }
+    return true;
   }
 }
 

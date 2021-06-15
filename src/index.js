@@ -19,11 +19,7 @@ document.getElementById("Enviar").addEventListener("click", () => {
     let creditCardNumber = numeroDeTarjeta.value;
     if (creditCardNumber == "") { alert("completa los datos de la tarjeta por favor"); }
 
-    for (let i = 0; i < creditCardNumber.length; i++) {
-        console.log(creditCardNumber[0]);
-    }
-
-
+    validator.getIssuer(creditCardNumber);
 
     if(validator.isvalid(creditCardNumber))
     { mensajeDeSalida.innerHTML = "&#10024" + " Felicidades, tu tarjeta es valida para hacer tu compra " + "&#10024"; } else { mensajeDeSalida.innerHTML = "&#9888;&#65039" + " Uy, al parecer haz ingresado una tarjeta incorrecta, intenta nuevamente"; }
