@@ -104,8 +104,8 @@ body {
 }
 .tarjeta{
     align-items: center;
-    float:right;
-    margin-top: -15px;
+    float:center;
+    margin-top: -20px;
     margin-bottom: -15px;
 }
 .etiqueta{
@@ -113,6 +113,12 @@ body {
     float:left;
     margin-top: 10px;
     text-align: justify;
+}
+.tipo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    margin: 10px; 
+    text-align: left;
 }
 .respuesta{
     font-family: ginebra, Geneva, calibri;

@@ -34,7 +34,9 @@
         <form class="formulario" id="form">
           <img class="tarjeta" src="imagenes/tarjeta.png" alt="modelo de tarjeta de crédito" width="250px" height="200px">
           <label class="etiqueta" for="numbercreditcard">Número de tarjeta:</label>
-          <input class="nombre" type="text"   id="numbercreditcard" name="numbercreditcard" required placeholder="xxxxxxxxxxxxxxxx" minlength="1" maxlength="16" autocomplete="off" title="Digite el número de su tarjeta (unicamente números sin espacios ni simbolos)"><br />
+          <input class="nombre" type="text" id="numbercreditcard" name="numbercreditcard" required placeholder="xxxxxxxxxxxxxxxx" minlength="1" maxlength="16" autocomplete="off" title="Digite el número de su tarjeta (unicamente números sin espacios ni simbolos)"><br />
+          <p class="tipo">El tipo de tarjeta sería:<span id="tipotarjetas"></span></p>
+          <input class="botoncito" type="reset" value="Reiniciar" />
           <input class="botoncito" type="button" value="Enviar" id="Enviar">
         </form>
         <div class="respuesta" id="validation"></div>

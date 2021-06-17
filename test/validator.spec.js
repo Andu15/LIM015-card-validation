@@ -47,18 +47,20 @@ describe('validator', () => {
       expect(typeof validator.getIssuer).toBe('function');
     });
 
-    it('Deberia retornar "visa" para una coincidencia con el primer digito "4000123456789017"', () => {
-      expect(validator.getIssuer("4000123456789017")).toBe("visa");
+    it('Deberia retornar "Visa" para una coincidencia con el primer digito "4000123456789017"', () => {
+      expect(validator.getIssuer("4000123456789017")).toBe("Visa");
     });
 
-    it('Deberia retornar "American Express" para una coincidencia con el primer digito "3000123456789018"', () => { expect(validator.getIssuer("3000123456789018")).toBe("American Express"); });
+    it('Deberia retornar "American Express" para una coincidencia con el primer digito "376865691457818"', () => { expect(validator.getIssuer("376865691457818")).toBe("American Express"); });
 
-    it('Deberia retornar "Mastercard" para una coincidencia con el primer digito "5000123456789016"', () => { expect(validator.getIssuer("5000123456789016")).toBe("Mastercard"); });
+    it('Deberia retornar "Mastercard" para una coincidencia con el primer digito "5369393503864731"', () => { expect(validator.getIssuer("5369393503864731")).toBe("Mastercard"); });
 
-    it('Deberia retornar "Discover" para una coincidencia con el primer digito "6011123456778015"', () => { expect(validator.getIssuer("6011123456778015")).toBe("Discover"); });
+    it('Deberia retornar "Discover" para una coincidencia con los cuatro primeros digitos "6011932163550427"', () => { expect(validator.getIssuer("6011932163550427")).toBe("Discover"); });
 
-    it('Deberia retornar "China Union Pay" para una coincidencia con el primer digito "6211123456776015"', () => { expect(validator.getIssuer("6211123456776015")).toBe("China Union Pay"); });
+    it('Deberia retornar "China Union Pay" para una coincidencia con los dos primeros digitos "6211123456776015"', () => { expect(validator.getIssuer("6211123456776015")).toBe("China Union Pay"); });
 
-    it('Deberia retornar "Maestro" para una coincidencia con el primer digito "5769123456778015"', () => { expect(validator.getIssuer("5769123456778015")).toBe("Maestro"); });
+    it('Deberia retornar "Maestro" para una coincidencia con "5769123456778015"', () => { expect(validator.getIssuer("5769123456778015")).toBe("Maestro"); });
+
+    test.todo('para casos diferentes debe retornar "sin definir"'), () => { expect(validator.getIssuer("1234567890123456").toBe("sin definir"))}
   })
 });
