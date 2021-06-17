@@ -1,5 +1,5 @@
 const validator = {
-  isvalid: (creditCardNumber) => {
+  isValid: (creditCardNumber) => {
     let arrayInverso = [];
     for (let d = creditCardNumber.length - 1; d >= 0; d--) {
       arrayInverso.push(creditCardNumber[d]);
@@ -27,8 +27,7 @@ const validator = {
     //sumar todos los digitos
     let total = sumaImpares + sumPares1 + sumPares2;
     let final = total % 10;
-    return final === 0
-    
+    return final === 0 ? true : false;
   },
   maskify: (creditCardNumber) => {
     let matriz = "";
@@ -39,9 +38,12 @@ const validator = {
     return matriz;
   },
   getIssuer: (creditCardNumber) => {
-    if (creditCardNumber.match(/^4[0-9]{15}$/g)) {
-      alert("Tu tarjeta es Visa");
-    } else if (creditCardNumber.match(/^3[4-7][0-9]{14}/g)) { alert("Tu tarjeta es American Express"); } else if (creditCardNumber.match(/^5[1-5][0-9]{14}/g)) { alert("Tu tarjeta es Mastercard") } else if (creditCardNumber.match(/^6011[0-9]{12}/g)) { alert("Tu tarjeta es Discover") } else if (creditCardNumber.match(/^62[0-9]{14}/g)) { alert("Tu tarjeta es China Union Pay") } else if (creditCardNumber.match(/^[5-6][0-7][0-6][0-9]{13}/g)) { alert("Tu tarjeta es Maestro") }
+    if (creditCardNumber.match(/^4[0-9]{15}$/g)) {alert("Tu tarjeta es Visa");}
+    else if (creditCardNumber.match(/^3[4-7][0-9]{14}/g)) { alert("Tu tarjeta es American Express"); }
+    else if (creditCardNumber.match(/^5[1-5][0-9]{14}/g)) { alert("Tu tarjeta es Mastercard") }
+    else if (creditCardNumber.match(/^6011[0-9]{12}/g)) { alert("Tu tarjeta es Discover") }
+    else if (creditCardNumber.match(/^62[0-9]{14}/g)) { alert("Tu tarjeta es China Union Pay") }
+    else if (creditCardNumber.match(/^[5-6][0-7][0-6][0-9]{13}/g)) { alert("Tu tarjeta es Maestro") }
     return true;
   }
 }
