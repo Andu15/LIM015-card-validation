@@ -121,6 +121,8 @@ body {
     text-align: left;
 }
 .respuesta{
+    background-color: #00bfa5;
+    opacity: 80%;
     font-family: ginebra, Geneva, calibri;
     font-size: 15px;
     font-weight: bold;

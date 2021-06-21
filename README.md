@@ -27,11 +27,20 @@ una aplicacion llamada magazine, no acepta cualquier tarjeta, debe ser valida po
 
 **V. RESUMEN DEL FEEDBACK:** (PENDIENTE)  
 * PARTNER FEEDBACK:  
-  * NOMBRE:  
+  * NOMBRE:Emily/Noelis  
   * MEJORAS:  
+  -cambiar el fondo de la respuesta  
+  -subir a GitHub pages  
 * COACH FEEDBACK:  
-   - NOMBRE: Sofia  
-   - MEJORAS:  
+   * NOMBRE: Sofia  
+   * MEJORAS:  
+   -UX [Crear prototipos para obtener feedback e iterar.]
+   -UX [Aplicar los principios de diseño visual (contraste, alineación, jerarquía).]
+   -UX [Aplicar los principios de diseño visual (contraste, alineación, jerarquía).]
+   -DOM [Uso de selectores del DOM.]
+   -Javascript [Uso de funciones (parámetros | argumentos | valor de retorno).]
+   -Javascript [Declaración correcta de variables (const & let).]
+
 ### 4. Objetivos generales logrados:
     * Diseñar un prototipo de baja fidelidad
     * Aplicar principios básicos de alineación o contraste
